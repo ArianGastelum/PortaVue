@@ -4,51 +4,77 @@ import App from "@/App.vue";
 
 <template>
   <div class="container">
-    <router-link class="navbar-brand" to="/">
-      <img
-        src="@/assets/portaLogo.png"
-        alt=""
-        width="200"
-        height="200"
-        class="d-inline-block align-text-top"
-      />
-    </router-link>
+    <div class="component-logo">
+      <router-link class="navbar-brand" to="/"> <img src="@/assets/portaLogo.png"
+      alt="" 
+      width="200" 
+      height="200" />
+    </router-link> 
+    </div>
     <h1>Bienvendo</h1>
-
-    <div class="mb-3">
-        <label for="" class="form-label">Email</label>
-        <input
-          type="email"
-          class="form-control"
-          name=""
-          id=""
-          aria-describedby="emailHelpId"
-          placeholder="ejemplo123@portasi.com"
-        />
+    <br />
+    <div class="card mb-3">
+      <div class="form-details">
+        <div class="mb-3">
+          <label for="" class="form-label">E-mail</label>
+          <input
+            type="email"
+            class="form-control"
+            name=""
+            id="idEmail"
+            placeholder="ejemplo123@portasi.com"
+          />
+        </div>
+        <div class="mb-3">
+          <label for="" class="form-label">Contraseña</label>
+          <input
+            type="password"
+            class="form-control"
+            name=""
+            id="idPassword"
+            placeholder="**********"
+          />
+            <h5> <router-link class="password-forgotten" to="/"> ¿Olvidaste la contraseña? </router-link> </h5>
+        </div>
       </div>
+      <button type="button" class="btn btn-success" id="Access">Aceptar</button>
       <br>
-      <div class="mb-3">
-        <label for="" class="form-label">Password</label>
-        <input
-          type="password"
-          class="form-control"
-          name=""
-          id=""
-          placeholder="**********"
-        />
-      </div>
-      <button type="button" class="btn btn-outline-success">Aceptar</button>
-      <div class="d-grid gap-2">
-      </div>
-      
+      <h3>¿No tienes cuenta aún? <router-link class="register" to="/"> Registrate</router-link> con nosotros </h3>
+    </div>
+    
   </div>
-      
 </template>
 
-<style>
+<style scoped>
 .container {
-  min-height: 100vh;
-  position: static;
+  min-height: 100%;
+  margin-bottom: auto;
+}
+
+.component-logo {
+  min-height: 0vh;
   align-items: center;
+}
+
+.form-control {
+  width: 50rem;
+  padding: 0.375rem 1rem;
+}
+
+.password-forgotten {
+  color: #70b94b;
+}
+
+.register{
+  color: #70b94b;
+}
+
+#Access {
+  margin: auto;
+  width: 400px;
+  border-radius: 1rem;
+  background-color: #70b94b;
+  color: white;
+  
 }
 </style>
