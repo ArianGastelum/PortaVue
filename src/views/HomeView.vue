@@ -1,80 +1,132 @@
 <script setup>
-import App from "@/App.vue";
+
 </script>
 
 <template>
-  <div class="container">
-    <div class="component-logo">
-      <router-link class="navbar-brand" to="/"> <img src="@/assets/portaLogo.png"
-      alt="" 
-      width="200" 
-      height="200" />
-    </router-link> 
-    </div>
-    <h1>Bienvendo</h1>
-    <br />
-    <div class="card mb-3">
-      <div class="form-details">
-        <div class="mb-3">
-          <label for="" class="form-label">E-mail</label>
-          <input
-            type="email"
-            class="form-control"
-            name=""
-            id="idEmail"
-            placeholder="ejemplo123@portasi.com"
-          />
-        </div>
-        <div class="mb-3">
-          <label for="" class="form-label">Contraseña</label>
-          <input
-            type="password"
-            class="form-control"
-            name=""
-            id="idPassword"
-            placeholder="**********"
-          />
-            <h5> <router-link class="password-forgotten" to="/"> ¿Olvidaste la contraseña? </router-link> </h5>
-        </div>
+     <head>
+    <title>PORTA Soluciones Inmobiliarias</title>
+  </head>
+  <body>
+    <div class="logo">
+        <img src="@/assets/portaLogo.png" alt="Porta Logo"/>
       </div>
-      <button type="button" class="btn btn-success" id="Access">Aceptar</button>
-      <br>
-      <h3>¿No tienes cuenta aún? <router-link class="register" to="/"> Registrate</router-link> con nosotros </h3>
+      
+    <div class="container">
+    <div class="menu">
+      
+      <ul class="menu-items">
+        <li>Home</li>
+        <li>Avalúos</li>
+        <li>Bienes Raíces</li>
+        <li>Créditos</li>
+        <li>Construcciones</li>
+        <li>Marketing</li>
+        <li>Jurídico/Legal</li>
+        <li>Inversiones</li>
+        <li>Intranet</li>
+        <li>Administración</li>
+        <li> <a href="/">Cerrar Sesión</a> 
+          </li>
+      </ul>
     </div>
-    
+    <div class="content">
+      <div class="user-info">
+        <h1 class="texto-bienvenida">Bienvenido</h1><h1 class="nombre-usuario">Gerardo Ramírez</h1>
+        <div>
+          <span>Iniciaste sesión como: </span>
+          <span style="font-weight: bold;">Administrador</span>
+        </div>
+      </div> 
+    </div>
   </div>
+  </body>
 </template>
 
-<style scoped>
+<style>
 .container {
-  min-height: 100%;
-  margin-bottom: auto;
+  display: flex;
+  height: 100vh;
 }
 
-.component-logo {
-  min-height: 0vh;
-  align-items: center;
+.menu {
+  width: 210px;
+  height: 100%;
+  background-color: #093B59;
+  padding: 10px;
+  position: fixed;
+  left: 0;
 }
 
-.form-control {
-  width: 50rem;
-  padding: 0.375rem 1rem;
+.content {
+  flex: 1;
+  padding: 20px;
 }
 
-.password-forgotten {
-  color: #70b94b;
+@media (max-width: 768px) {
+  .menu {
+    width: 100%;
+    position: relative;
+  }
+
+  .content {
+    margin-top: 80px;
+  }
 }
 
-.register{
-  color: #70b94b;
+.menu ul {
+    height: 100%;
+}
+.menu li {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size:x-large;
+    color: white;
+    padding: 0px;
 }
 
-#Access {
-  margin: auto;
-  width: 400px;
-  border-radius: 1rem;
-  background-color: #70b94b;
-  color: white;
+.logo {
+    position: fixed;
+     right: 0;
+     margin-right: 10px;
+     top: 10px;
+}
+
+
+.menu-items {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-self: center;
+  text-align: left;
+  height: auto;
+  padding: 0;
+  margin-left: 5px;
+}
+
+.menu-items li {
+  height: 100%;
+  display: block;
+  padding: 10px;
+  list-style-type: none;
+  margin: 0; /* Elimina el margen entre los elementos li */
+
+}
+
+
+.menu-items :hover {
+  background-color: #093B59; /* Blue */
   
+  }
+
+  .menu-items li:hover {
+  color: #4CAF50; /* Green */
 }
+
+.texto-bienvenida {
+    color: #093B59;
+  }
+  
+  .nombre-usuario {
+    color: #4CAF50;
+  }
+
 </style>
