@@ -39,7 +39,7 @@
       </div>
       <!-- <router-link id="Access" class="btn btn-outline-primary" to="/home">Aceptar</router-link> -->
       <p v-if="errMsg">{{ errMsg }}</p>
-      <p><button id="Access" @click="register">Aceptar</button></p>
+      <p><button id="Access" @click="login">Aceptar</button></p>
       <p>
         <button id="Access" @click="signInWithGoogle">
           Iniciar con Google
@@ -68,10 +68,10 @@ const password = ref("");
 const errMsg = ref();
 const router = useRouter();
 
-const register = () => {
+const login = () => {
   signInWithEmailAndPassword(getAuth(), email.value, password.value)
     .then((data) => {
-      console.log("Registrado exitosamente");
+      router.push('/home');
     })
     .catch((error) => {
       console.log(error.code);

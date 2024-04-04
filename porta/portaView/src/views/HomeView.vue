@@ -26,7 +26,7 @@
           <li>Intranet</li>
           <li>Administración</li>
           <li> 
-            <button @click="handleSignOut" v-if="isLoggedIn" href="/">Cerrar sesión</button>
+            <base-button @click="handleSignOut" v-if="isLoggedIn">Cerrar sesión</base-button>
           </li>
         </ul>
       </div>
