@@ -21,7 +21,7 @@ const rol = ref("");
 const router = useRouter();
 
 const register = () => {
-  createUserWithEmailAndPassword(getAuth(), email.value, password.value)
+  createUserWithEmailAndPassword(getAuth(), email.value, password.value, rol.value)
     .then((data) => {
       console.log("Registrado exitosamente");
     })
