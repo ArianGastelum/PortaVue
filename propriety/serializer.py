@@ -6,7 +6,7 @@ class LoginSerializer(serializers.ModelSerializer):
         model = Login
         fields = '__all__'
 
-class ProprietySerializer(serializers.ModelSerializer):
+class ViviendaSerializer(serializers.ModelSerializer):
     class Meta:
         model = ProprietyVivienda
         fields = '__all__'
