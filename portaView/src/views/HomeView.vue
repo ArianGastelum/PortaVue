@@ -17,7 +17,9 @@
         <ul class="menu-items">
           <li>Home</li>
           <li>Avalúos</li>
-          <li>Bienes Raíces</li>
+          <li>
+            <base-button @click="enterPropriety">Bienes Raíces</base-button>
+          </li>
           <li>Créditos</li>
           <li>Construcciones</li>
           <li>Marketing</li>
@@ -68,6 +70,9 @@ const handleSignOut = () => {
     router.push("/");
   });
 };
+const enterPropriety = ()  => {
+  router.push("/bienesraices")
+}
 </script>
 
 <style scoped>
