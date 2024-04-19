@@ -101,6 +101,7 @@ class Migration(migrations.Migration):
                 ('impuestos', models.TextField()),
                 ('otros', models.TextField()),
                 ('total', models.TextField()),
+                ('imagen', models.TextField()),
             ],
         ),
     ]

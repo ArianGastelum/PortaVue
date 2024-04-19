@@ -94,3 +94,4 @@ class ProprietyVivienda(models.Model):
     impuestos = models.TextField()
     otros = models.TextField()
     total = models.TextField()
+    imagen = models.TextField()
