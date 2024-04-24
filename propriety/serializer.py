@@ -1,12 +1,12 @@
-from .models import Login, ProprietyVivienda
+from .models import viviendas, empleados
 from rest_framework import serializers
-
-class LoginSerializer(serializers.ModelSerializer):
-    class Meta:
-        model = Login
-        fields = '__all__'
 
 class ViviendaSerializer(serializers.ModelSerializer):
     class Meta:
-        model = ProprietyVivienda
+        model = viviendas
+        fields = '__all__'
+        
+class EmpleadoSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = empleados
         fields = '__all__'

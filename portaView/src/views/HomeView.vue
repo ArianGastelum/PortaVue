@@ -35,7 +35,7 @@
       <div class="content">
         <div class="user-info">
           <h1 class="texto-bienvenida">Bienvenido</h1>
-          <h1 class="nombre-usuario">Gerardo Ramírez</h1>
+          <h1 class="nombre-usuario"></h1>
           <div>
             <span>Iniciaste sesión como: </span>
             <span style="font-weight: bold">Administrador</span>

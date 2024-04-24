@@ -1,12 +1,12 @@
 from django.db import models
 
 # Create your models here.
-class Login(models.Model):
-    email = models.TextField
-    password = models.TextField()
+class empleados(models.Model):
+    id = models.AutoField(primary_key=True)
+    nombre = models.TextField()
 
-class ProprietyVivienda(models.Model):
-   # id = models.AutoField()
+class viviendas(models.Model):
+    id = models.AutoField(primary_key=True)
     fechaInicio = models.TextField()
     fechaTermino = models.TextField()
     empresa = models.TextField()

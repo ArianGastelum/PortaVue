@@ -31,9 +31,7 @@
             placeholder="**********"
           />
           <h5>
-            <router-link class="password-forgotten" to="/">
-              ¿Olvidaste la contraseña?
-            </router-link>
+          <a class="password-forgotten" href="/reset">¿Olvidaste la contraseña?</a>
           </h5>
         </div>
       </div>
@@ -102,6 +100,8 @@ const signInWithGoogle = () => {
     })
     .catch((error) => {});
 };
+
+
 </script>
 
 <style scoped>
