@@ -1,22 +1,33 @@
 <template>
   <div class="decoration-line"></div>
+  <Div class="container-reset">
     <div class="component-logo">
-      <router-link class="navbar-brand" to="/">
-        <img src="@/assets/portaLogo.png" alt="" width="200" height="200" />
-      </router-link>
-    </div>
-  <Div class="container">
+    <router-link class="navbar-brand" to="/">
+      <img src="@/assets/portaLogo.png" alt="" width="200" height="200" />
+    </router-link>
+  </div>
     <div class="container-text">
-  <h1>Cambiar Contraseña</h1>
-</div>
-  <p><input type="text" placeholder="Email" v-model="email" class="input-field" /></p>
-  <p><button @click="resetPassword" class="custom-button">Enviar</button></p>
-</Div>
+      <h1>Cambiar Contraseña</h1>
+    </div>
+    <p>
+      <input
+        type="text"
+        placeholder="Email"
+        v-model="email"
+        class="input-field"
+      />
+    </p>
+    <p><button @click="resetPassword" class="custom-button">Enviar</button></p>
+  </Div>
 </template>
 
 <script setup>
 import { ref, onMounted } from "vue";
-import { getAuth, sendPasswordResetEmail, onAuthStateChanged, } from "firebase/auth";
+import {
+  getAuth,
+  sendPasswordResetEmail,
+  onAuthStateChanged,
+} from "firebase/auth";
 import router from "@/router";
 const email = ref("");
 const isLoggedIn = ref(false);
@@ -38,34 +49,32 @@ const resetPassword = () => {
   sendPasswordResetEmail(getAuth(), email.value)
     .then((data) => {
       alert("Se le envio un correo");
-
     })
     .catch((error) => {
       const errorCode = error.code;
       const errorMessage = error.message;
-
     });
-}
+};
 </script>
 
 <style scoped>
-.container{
+.container-reset {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   height: 100vh;
-  margin-top: -350px;
+  margin-top: auto;
 }
-.container-text h1{
-  margin-bottom: 30px;
+.container-text h1 {
+  margin-bottom: 1rem;
   font-size: 24px;
 }
-.component-logo{
+.component-logo {
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin-top: 200px;
+  margin-top: 2rem;
 }
 
 .input-field {
@@ -78,7 +87,7 @@ const resetPassword = () => {
 
 .custom-button {
   padding: 10px 20px; /* Ajusta el padding según tus preferencias */
-  background-color: #6FB84B; /* Color de fondo */
+  background-color: #6fb84b; /* Color de fondo */
   color: #fff; /* Color del texto */
   border: none;
   border-radius: 5px;
@@ -94,5 +103,4 @@ const resetPassword = () => {
   width: 100%; /* Ancho completo */
   background-color: #093b59; /* Color azul */
 }
-
 </style>
