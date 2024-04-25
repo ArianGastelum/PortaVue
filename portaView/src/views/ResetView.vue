@@ -65,7 +65,8 @@ const resetPassword = () => {
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin-top: 200px;
+  margin-top: 1vh;
+  margin-bottom: 2vh;
 }
 
 .input-field {
