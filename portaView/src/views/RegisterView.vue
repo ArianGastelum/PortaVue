@@ -103,8 +103,6 @@ const signInWithGoogle = () => {
   align-items: center;
   margin-top: 20px;
   margin-bottom: 2rem;
-  margin-top:1vh;
-  margin-bottom: 7vh;
 }
 
 .input-field {
