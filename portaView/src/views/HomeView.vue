@@ -15,22 +15,18 @@
     <div class="container">
       <div class="menu">
         <ul class="menu-items">
-          <li>Home</li>
-          <li>Avalúos</li>
-          <li>
-            <base-button @click="enterPropriety">Bienes Raíces</base-button>
-          </li>
-          <li>Créditos</li>
-          <li>Construcciones</li>
-          <li>Marketing</li>
-          <li>Jurídico/Legal</li>
-          <li>Inversiones</li>
-          <li>Intranet</li>
-          <li>Administración</li>
-          <li> 
-            <base-button @click="handleSignOut" v-if="isLoggedIn">Cerrar sesión</base-button>
-          </li>
-        </ul>
+                    <li><base-button @click="handleHome">Home</base-button></li>
+                    <li><base-button @click="enterContructionSite">Avalúos</base-button></li>
+                    <li><base-button @click="enterPropriety">Bienes Raíces</base-button></li>
+                    <li><base-button @click="enterContructionSite">Créditos</base-button></li>
+                    <li><base-button @click="enterContructionSite">Construcciones</base-button></li>
+                    <li><base-button @click="enterContructionSite">Marketing</base-button></li>
+                    <li><base-button @click="enterContructionSite">Jurídico/Legal</base-button></li>
+                    <li><base-button @click="enterContructionSite">Inversiones</base-button></li>
+                    <li><base-button @click="enterContructionSite">Intranet</base-button></li>
+                    <li><base-button @click="enterContructionSite">Administración</base-button></li>
+                    <li v-if="isLoggedIn"><base-button @click="handleSignOut">Cerrar sesión</base-button></li>
+                </ul>
       </div>
       <div class="content">
         <div class="user-info">
@@ -72,6 +68,11 @@ const handleSignOut = () => {
 };
 const enterPropriety = ()  => {
   router.push("/bienesraices")
+}
+
+
+const enterContructionSite = () => {
+    router.push("/contruccion")
 }
 </script>
 
