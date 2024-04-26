@@ -1,6 +1,6 @@
 <template>
-  <Dashboard class="dashboard">
-  <div>
+  <Dashboard/>
+  <div class="content">
     <select name="Propiedades" id="propiedades">
       <option value="Todas">All</option>
       <option value="Terrenos">Terrenos</option>
@@ -10,29 +10,39 @@
 
     <p><button @click="createPropriety" class="button-primary">Create</button></p>
   </div>
-  </Dashboard>
 </template>
-
 <script>
+import { useRouter } from "vue-router";
+
 import Dashboard from '../components/Menu.vue';
 export default {
   name: "ProprietyView",
   components: {
     Dashboard,
   },
-  setup(){
+  setup() {
+    const router = useRouter(); 
+
     const createPropriety = () => { 
       router.push("/bienesraices/create");
     };
-  }
-}
+  
+    return { createPropriety}; 
+  },
+};
 </script>
 <style scoped>
-  .button-primary{
-    display:flex ;
-    flex-direction: column;
-    text-align: center;
-    margin-left: 500px;
-    margin-top: 500px;
-  }
+.dashboard{
+z-index: -1;
+}
+
+.content {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-top: 0;
+  margin-bottom: 0;
+}
 </style>

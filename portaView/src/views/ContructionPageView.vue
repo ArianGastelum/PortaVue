@@ -15,7 +15,7 @@
                     <li><base-button @click="handleHome">Home</base-button></li>
                     <li><base-button @click="enterContructionSite">Avalúos</base-button></li>
                     <li><base-button @click="enterPropriety">Bienes Raíces</base-button></li>
-                    <li><base-button @click="enterContructionSite">Créditos</base-button></li>
+                    <li><base-button @click="enterContructionSite">Créditos Hipotecarios</base-button></li>
                     <li><base-button @click="enterContructionSite">Construcciones</base-button></li>
                     <li><base-button @click="enterContructionSite">Marketing</base-button></li>
                     <li><base-button @click="enterContructionSite">Jurídico/Legal</base-button></li>

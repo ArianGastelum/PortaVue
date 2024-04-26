@@ -1,4 +1,5 @@
 <template>
+    <div class="decoration-line"></div>
     <body>
     <form action="#" name="solucionFormulario">
     <!-- ######### Seccion de fechas ######## -->
@@ -290,34 +291,58 @@
     }
 </script>
 <style scoped>
-*{
-	box-sizing:border-box;
-	margin:0;padding:0;
-}
-form{
-	width:400px;
-	padding:32px;
-	border:1px solid #000;
-	border-radius:10px;
-	margin:32px auto;
-	background-color:#b2ccff;
-}
-input[type="text"],select,textarea{
-	display:block;
-	padding:4px 8px;
-	width:100%;
-	margin:8px 0;
-}
-textarea{height:96px;resize:none;}
-
-
-label{
-	font-weight:bold;
-	display:block;
-	margin:8px 0;
+body {
+    margin-top: 20px;
+    font-family: Arial, sans-serif;
 }
 
-.marketing label,.rgpd{display:inline-block;font-weight:normal;}
-.rgpd{width:90%;}
-mark{float:right;}
+form {
+    width: 90%;
+    max-width: 600px; /* Limitamos el ancho máximo del formulario */
+    margin: 0 auto;
+}
+
+section {
+    margin-bottom: 20px;
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+input[type="text"],
+input[type="number"],
+textarea,
+select,
+input[type="date"] {
+    width: calc(100% - 12px);
+    padding: 8px;
+    margin-top: 5px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+input[type="submit"] {
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    float: right;
+}
+
+input[type="submit"]:hover {
+    background-color: #45a049;
+}
+
+.decoration-line {
+  height: 40px; /* Grosor de la línea */
+  width: 100%; /* Ancho completo */
+  background-color: #093b59; /* Color azul */
+}
+
 </style>

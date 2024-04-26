@@ -1,36 +1,24 @@
 <template>
-    <div class="logo">
-            <img src="@/assets/portaLogo.png" alt="Porta Logo" width="100" height="100" />
-        </div>
-    <div class="container">
-      <div class="menu">
-        <ul class="menu-items">
-          <li><base-button @click="handleHome">Home</base-button></li>
-          <li><base-button @click="enterContructionSite">Avalúos</base-button></li>
-          <li><base-button @click="enterPropriety">Bienes Raíces</base-button></li>
-          <li><base-button @click="enterContructionSite">Créditos Hipotecarios</base-button></li>
-          <li><base-button @click="enterContructionSite">Construcciones</base-button></li>
-          <li><base-button @click="enterContructionSite">Marketing</base-button></li>
-          <li><base-button @click="enterContructionSite">Jurídico/Legal</base-button></li>
-          <li><base-button @click="enterContructionSite">Inversiones</base-button></li>
-          <li><base-button @click="enterContructionSite">Intranet</base-button></li>
-          <li><base-button @click="enterContructionSite">Administración</base-button></li>
-          <li><base-button @click="handleSignOut" v-if="isLoggedIn">Cerrar sesión</base-button></li>
-        </ul>
-      </div>
-      
-      <div class="content">
-        <div class="user-info">
-          <h1 class="texto-bienvenida">Bienvenido</h1>
-          <h1 class="nombre-usuario"></h1>
-          <div>
-            <span>Iniciaste sesión como: </span>
-            <span style="font-weight: bold">Administrador</span>
-          </div>
-        </div>
-      </div>
-    </div>
+  <div class="logo">
+    <img src="@/assets/portaLogo.png" alt="Porta Logo" width="100" height="100" />
+  </div>
+  <nav class="menu">
+    <ul class="menu-items">
+      <li><base-button @click="handleHome">Home</base-button></li>
+      <li><base-button @click="enterContructionSite">Avalúos</base-button></li>
+      <li><base-button @click="enterPropriety">Bienes Raíces</base-button></li>
+      <li><base-button @click="enterContructionSite">Créditos Hipotecarios</base-button></li>
+      <li><base-button @click="enterContructionSite">Construcciones</base-button></li>
+      <li><base-button @click="enterContructionSite">Marketing</base-button></li>
+      <li><base-button @click="enterContructionSite">Jurídico/Legal</base-button></li>
+      <li><base-button @click="enterContructionSite">Inversiones</base-button></li>
+      <li><base-button @click="enterContructionSite">Intranet</base-button></li>
+      <li><base-button @click="enterContructionSite">Administración</base-button></li>
+      <li v-if="isLoggedIn"><base-button @click="handleSignOut">Cerrar sesión</base-button></li>
+    </ul>
+  </nav>
 </template>
+
 
 <script>
 import { ref } from "vue";
