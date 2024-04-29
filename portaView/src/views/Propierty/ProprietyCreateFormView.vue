@@ -130,13 +130,13 @@
     <section>
     <h3>Información de la transacción de la propiedad</h3>
     <label for="empresa">Empresa:</label>
-    <input type="text" id="empresa" name="empresa" maxlength="30">
+    <input type="text" id="empresa" name="empresa" maxlength="60">
 
     <label for="agente">Agente:</label>
-    <input type="text" id="agente" name="agente" maxlength="30">
+    <input type="text" id="agente" name="agente" maxlength="50">
 
     <label for="propietario">Propietario:</label>
-    <input type="text" id="propietario" name="propietario" maxlength="30">
+    <input type="text" id="propietario" name="propietario" maxlength="50">
 
     <label for="claveCastratal">Clave Catastral:</label>
     <input type="text" id="claveCastratal" name="claveCastratal" maxlength="30">
@@ -148,7 +148,7 @@
     <input type="text" id="manzana" name="manzana" maxlength="30">
 
     <label for="cuentaAgua">Cuenta de Agua:</label>
-    <input type="text" id="cuentaAgua" name="cuentaAgua" maxlength="30">
+    <input type="checkbox" id="cuentaAgua" name="cuentaAgua" maxlength="30">
 
     <label for="autosEst">Autos Estacionados:</label>
     <input type="number" id="autosEst" name="autosEst" min="0" max="10">
@@ -163,31 +163,31 @@
     <input type="text" id="cocheraElectrica" name="cocheraElectrica">
 
     <label for="patio">Patio:</label>
-    <input type="checkbox" id="patio" name="patio">
+    <input type="text" id="patio" name="patio" maxlength="30">
 
     <label for="asador">Asador:</label>
-    <input type="checkbox" id="asador" name="asador">
+    <input type="text" id="asador" name="asador" maxlength="70">
 
     <label for="fuentes">Fuentes:</label>
-    <input type="checkbox" id="fuentes" name="fuentes">
+    <input type="text" id="fuentes" name="fuentes" maxlength="90">
 
     <label for="jacuzzi">Jacuzzi:</label>
-    <input type="checkbox" id="jacuzzi" name="jacuzzi">
+    <input type="text" id="jacuzzi" name="jacuzzi" maxlength="120">
 
     <label for="alberca">Alberca:</label>
-    <input type="checkbox" id="alberca" name="alberca">
+    <input type="text" id="alberca" name="alberca" maxlength="70">
 
     <label for="jardin">Jardín:</label>
-    <input type="checkbox" id="jardin" name="jardin">
+    <input type="text" id="jardin" name="jardin" maxlength="30">
 
     <label for="bodega">Bodega:</label>
-    <input type="checkbox" id="bodega" name="bodega">
+    <input type="text" id="bodega" name="bodega" maxlength="50">
 
     <label for="cisterna">Cisterna:</label>
-    <input type="checkbox" id="cisterna" name="cisterna">
+    <input type="text" id="cisterna" name="cisterna" maxlength="45">
 
     <label for="tinaco">Tinaco:</label>
-    <input type="checkbox" id="tinaco" name="tinaco">
+    <input type="text" id="tinaco" name="tinaco" maxlength="45">
 
     <label for="acCentral">Aire Central:</label>
     <input type="checkbox" id="acCentral" name="acCentral">
@@ -205,7 +205,7 @@
     <input type="checkbox" id="patioEncementado" name="patioEncementado" maxlength="30">
 
     <label for="cocina integral">Cocina integral:</label>
-    <input type="checkbox" id="cocina integral" name="cocina integral" maxlength="30">
+    <input type="text" id="cocina integral" name="cocina integral" maxlength="45">
 
     <label for="amueblado">Amueblado:</label>
     <input type="checkbox" id="amueblado" name="amueblado">
@@ -223,7 +223,7 @@
     <input type="text" id="alarma" name="alarma" maxlength="30">
 
     <label for="vitropiso">Tipo de Vitropiso:</label>
-    <input type="text" id="vitropiso" name="vitropiso" maxlength="30">
+    <input type="text" id="vitropiso" name="vitropiso" maxlength="80">
 
     <label for="closet">Closet:</label>
     <input type="text" id="closet" name="closet" maxlength="30">
@@ -277,8 +277,8 @@
 
     <!-- ######### seccion de la imagen ######## -->
     <section>
-    <label for="avatar">Choose a profile picture:</label>
-    <input type="file" id="avatar" name="avatar" accept="image/png, image/jpeg" />
+    <label for="avatar">Ingrese las imagenes de la vivienda:</label>
+    <input type="file" id="avatar" name="avatar" accept="image/png, image/jpeg" multiple />
     </section>
 
     <button type="summit" class="button-primary">Create</button>

@@ -32,17 +32,32 @@ export default {
 };
 </script>
 <style scoped>
-.dashboard{
-z-index: -1;
+.content {
+  display: flex;
+  flex-direction: row; /* Cambiado de column a row para alinear horizontalmente */
+  align-items: center;
+  justify-content: center; /* Agregado para centrar los elementos horizontalmente */
 }
 
-.content {
-  position: relative;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  margin-top: 0;
-  margin-bottom: 0;
+select {
+  padding: 0.5rem;
+  font-size: 1rem;
+  margin-right: 1rem; /* Añadido margen derecho para separar el select del botón */
+}
+
+.button-primary {
+  padding: 0.5rem 1rem;
+  font-size: 1rem;
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 0.25rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  margin-top: 1rem;
+}
+
+.button-primary:hover {
+  background-color: #0056b3;
 }
 </style>
