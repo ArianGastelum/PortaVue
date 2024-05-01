@@ -1,6 +1,6 @@
 import { createRouter, createWebHistory } from 'vue-router'
 import LoginView from '@/views/LoginView.vue'
-import { getAuth, onAuthStateChanged, sendPasswordResetEmail } from "firebase/auth";
+import { getAuth, onAuthStateChanged } from "firebase/auth";
 
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
@@ -8,7 +8,8 @@ const router = createRouter({
     {
       path: '/',
       name: 'login',
-      component: LoginView
+      component: LoginView,
+      
     },
     {
       path: '/home',
@@ -16,7 +17,11 @@ const router = createRouter({
       // route level code-splitting
       // this generates a separate chunk (About.[hash].js) for this route
       // which is lazy-loaded when the route is visited.
-      component: () => import('../views/HomeView.vue')
+      component: () => import('../views/HomeView.vue'),
+      meta: {
+        requiresAuth: true,
+        
+      }
     },
     {
       path: '/register',
@@ -44,6 +49,10 @@ const router = createRouter({
       // this generates a separate chunk (About.[hash].js) for this route
       // which is lazy-loaded when the route is visited.
       component: () => import('../views/ProprietyView.vue'),
+      meta: {
+        requiresAuth: true,
+        
+      }
     },
     {
       path: '/reset',
@@ -60,6 +69,10 @@ const router = createRouter({
       // this generates a separate chunk (About.[hash].js) for this route
       // which is lazy-loaded when the route is visited.
       component: () => import('../views/Propriety/ProprietyCreateFormView.vue'),
+      meta: {
+        requiresAuth: true,
+        
+      }
     },
     {
       path: '/contruccion',
@@ -68,6 +81,10 @@ const router = createRouter({
       // this generates a separate chunk (About.[hash].js) for this route
       // which is lazy-loaded when the route is visited.
       component: () => import('../views/ContructionPageView.vue'),
+      meta: {
+        requiresAuth: true,
+        
+      }
     },
   ],
 });
