@@ -87,11 +87,14 @@ WSGI_APPLICATION = 'porta.wsgi.application'
 DATABASES = {
     'default': {  
         'ENGINE': 'django.db.backends.mysql',  
-        'NAME': 'cynthiap_porta',  
-        'USER': 'cynthiap',  
-        'PASSWORD': 'itsonGuaymas123',  
-        'HOST': '65.99.205.146',  
-        'PORT': '3306',
+        'NAME': 'portadb',  
+        'USER': 'root',  
+        'PASSWORD': '2244',  
+        'HOST': '127.0.0.1',  
+        'PORT': '3306',  
+        'OPTIONS': {  
+            'init_command': "SET sql_mode='STRICT_TRANS_TABLES'"  
+        }
     }
 }
 
